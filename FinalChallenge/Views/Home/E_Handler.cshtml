@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "Event Handler";
+}
+
+
+<div class="card">
+    <h1 class="card-header">@ViewData["Title"]</h1>
+    <div class="card-body ">
+        <p>In programming, an event is an action that occurs as a result of the user or another source, such as a mouse click. An event handler is a routine that deals with the event, allowing a programmer to write code that is executed when the event occurs.</p>
+        <h4>Common event examples</h4>
+        <ul class="list-group">
+            <li class="list-group-item list1">A web browser completely loading a web page.</li>
+            <li class="list-group-item list1">A file being created or modified on a filesystem.</li>
+            <li class="list-group-item list1">A hardware sensor such as a webcam or microphone receiving sensory input.</li>
+            <li class="list-group-item list1">The arrival of incoming network traffic.</li>
+            <li class="list-group-item list1">The occurrence of an error at the program or system level.</li>
+        </ul>
+        <div class="text-right mr-2 mt-0 "><small class="text-info ">Above there is an example of hover event. Accomplished using CSS.</small></div>
+        <ul class="list-group">
+            <li class="list-group-item list1">
+                Another example of an event is a user clicking a button on a web page. This action creates what is known as a "click" event.
+                <a class="btn btn-danger text-white" asp-controller="Home" asp-action="ClickHandler">  Click!</a>
+            </li>
+            <div class="text-right"><p class="text-danger">@Model</p></div>
+        </ul>
+    </div>
+
+
+</div>
+<p>Those are only selected DateTime properties.</p>

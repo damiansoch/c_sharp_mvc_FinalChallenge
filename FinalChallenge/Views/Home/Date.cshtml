@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "DateTime";
+}
+
+
+
+
+
+
+
+<div class="card">
+    <h1 class="card-header">@ViewData["Title"]</h1>
+    <div class="card-body ">
+
+        <p class="card-text">Represents an instant in time, typically expressed as a date and time of day.</p>
+        <h4 class="mt-5">Properties</h4>
+        <h6 class="mt-5">DateTime.Now Property</h6>
+        <p>Gets the date component of this instance.</p>
+        <small>@Model</small>
+        <h6 class="mt-5">DateTime.Day Property</h6>
+        <p>Gets the day of the month represented by this instance.</p>
+        <small>@Model.Day</small>
+        <h6 class="mt-5">DateTime.DayOfWeek Property</h6>
+        <p>Gets the day of the week represented by this instance.</p>
+        <small>@Model.DayOfWeek</small>
+        <h6 class="mt-5">DateTime.DayOfYear Property</h6>
+        <p>Gets the day of the year represented by this instance.</p>
+        <small>@Model.DayOfYear</small>
+        <h6 class="mt-5">DateTime.Hour Property</h6>
+        <p>Gets the hour component of the date represented by this instance.</p>
+        <small>@Model.Hour</small>
+        <h6 class="mt-5">DateTime.Month Property</h6>
+        <p>Gets the month component of the date represented by this instance.</p>
+        <small>@Model.Month</small>
+    </div>
+
+</div>
+<p>Those are only selected DateTime properties.</p>
+
