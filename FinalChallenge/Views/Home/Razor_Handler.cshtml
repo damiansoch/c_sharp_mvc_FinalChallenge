@@ -1,45 +1,16 @@
-﻿@page  "{handler?}"
-@{
-
-    @functions {
-        public string Message { get; set; } = "Initial Request";
-        public void OnGet()
-        {
-        }
-        public void OnPost()
-        {
-            Message = "Form Posted";
-        }
-        public void OnPostDelete()
-        {
-            Message = "Delete handler fired";
-        }
-        public void OnPostEdit(int id)
-        {
-            Message = "Edit handler fired";
-        }
-        public void OnPostView(int id)
-        {
-            Message = "View handler fired";
-        }
-    }
+﻿@{
+    ViewData["Title"] = "Razor Event handlers";
 }
 
-<div class="row">
-    <div class="col-lg-1">
-        <form  method="post" action="Razor_Handler?handler=Edit">
-            <button class="btn btn-default">Edit</button>
-        </form>
+<div class="card">
+    <h1 class="card-header">@ViewData["Title"]</h1>
+    <div class="card-body ">
+        <h4>What are Razor pages</h4>
+        <p>Razor pages are simple and introduce a page-focused framework that is used to create cross-platform, data-driven, server-side web pages with clean separation of concerns.</p>
+        <h4>Handler Methods in Razor Pages</h4>
+        <p>Handler methods in Razor Pages are methods that are automatically executed as a result of a request. The Razor Pages framework uses a naming convention to select the appropriate handler method to execute. The default convention works by matching the HTTP verb used for the request to the name of the method, which is prefixed with "On": <span class="text-danger">OnGet()</span>, <span class="text-danger">OnPost()</span>, <span class="text-danger">OnEdit()</span></p>
+        <small>I made the very simple example of onGet(), onPost() with Razor Pages</small>
+        <a href="https://github.com/damiansoch/RazorSample/tree/master/RazorSample">Github</a>
     </div>
-    <div class="col-lg-1">
-        <form asp-page-handler="delete" method="post">
-            <button class="btn btn-default">Delete</button>
-        </form>
-    </div>
-    <div class="col-lg-1">
-        <form asp-page-handler="view" method="post">
-            <button class="btn btn-default">View</button>
-        </form>
-    </div>
+
 </div>
-<h3 class="clearfix">@Message</h3>

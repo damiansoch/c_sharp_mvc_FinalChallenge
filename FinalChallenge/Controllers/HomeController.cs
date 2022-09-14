@@ -37,6 +37,10 @@ namespace FinalChallenge.Controllers
         {
             return View();
         }
+        public IActionResult VoidM()
+        {
+            return View();
+        }
         //----------------------------------------------------------------
 
         public IActionResult ClickHandler()
